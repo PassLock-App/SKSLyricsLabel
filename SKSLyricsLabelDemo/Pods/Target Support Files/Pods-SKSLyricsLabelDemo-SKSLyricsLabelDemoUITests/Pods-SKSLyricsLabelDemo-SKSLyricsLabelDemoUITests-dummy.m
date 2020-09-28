@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests
+@end

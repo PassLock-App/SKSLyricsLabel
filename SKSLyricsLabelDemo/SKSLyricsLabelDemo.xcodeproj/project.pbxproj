@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A1A454F01F423242F3D5AE7 /* Pods_SKSLyricsLabelDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FADE9E4EA3F48DAD72A481 /* Pods_SKSLyricsLabelDemoTests.framework */; };
+		1BB4CC242521F28E00B0EC17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC232521F28E00B0EC17 /* AppDelegate.swift */; };
+		1BB4CC2D2521F29000B0EC17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB4CC2C2521F29000B0EC17 /* Assets.xcassets */; };
+		1BB4CC3B2521F29000B0EC17 /* SKSLyricsLabelDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC3A2521F29000B0EC17 /* SKSLyricsLabelDemoTests.swift */; };
+		1BB4CC462521F29000B0EC17 /* SKSLyricsLabelDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC452521F29000B0EC17 /* SKSLyricsLabelDemoUITests.swift */; };
+		1BB4CC602521F34A00B0EC17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB4CC5F2521F34A00B0EC17 /* LaunchScreen.storyboard */; };
+		1BB4CC772521F3D600B0EC17 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC722521F3D600B0EC17 /* DemoViewController.swift */; };
+		1BB4CC9D2521F55600B0EC17 /* SKSLyricsLabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC9A2521F55600B0EC17 /* SKSLyricsLabelExtension.swift */; };
+		1BB4CC9E2521F55600B0EC17 /* SKSMultiLineLyricsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC9B2521F55600B0EC17 /* SKSMultiLineLyricsLabel.swift */; };
+		1BB4CC9F2521F55600B0EC17 /* SKSOneLineLyricsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4CC9C2521F55600B0EC17 /* SKSOneLineLyricsLabel.swift */; };
+		2400ED272ED0AAF41BAE2CED /* Pods_SKSLyricsLabelDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264550A4019E3C84FAB74A4A /* Pods_SKSLyricsLabelDemo.framework */; };
+		72CC1ACFE46A2BC9EBA2C012 /* Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D43ACFCB0886B836A691B7 /* Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BB4CC372521F29000B0EC17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BB4CC182521F28E00B0EC17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BB4CC1F2521F28E00B0EC17;
+			remoteInfo = SKSLyricsLabelDemo;
+		};
+		1BB4CC422521F29000B0EC17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BB4CC182521F28E00B0EC17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BB4CC1F2521F28E00B0EC17;
+			remoteInfo = SKSLyricsLabelDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01FADE9E4EA3F48DAD72A481 /* Pods_SKSLyricsLabelDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKSLyricsLabelDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18801DF05BF83924C73FF3CF /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BB4CC202521F28E00B0EC17 /* SKSLyricsLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKSLyricsLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB4CC232521F28E00B0EC17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BB4CC2C2521F29000B0EC17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BB4CC312521F29000B0EC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB4CC362521F29000B0EC17 /* SKSLyricsLabelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKSLyricsLabelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB4CC3A2521F29000B0EC17 /* SKSLyricsLabelDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSLyricsLabelDemoTests.swift; sourceTree = "<group>"; };
+		1BB4CC3C2521F29000B0EC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB4CC412521F29000B0EC17 /* SKSLyricsLabelDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKSLyricsLabelDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB4CC452521F29000B0EC17 /* SKSLyricsLabelDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSLyricsLabelDemoUITests.swift; sourceTree = "<group>"; };
+		1BB4CC472521F29000B0EC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BB4CC5F2521F34A00B0EC17 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BB4CC722521F3D600B0EC17 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		1BB4CC9A2521F55600B0EC17 /* SKSLyricsLabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSLyricsLabelExtension.swift; sourceTree = "<group>"; };
+		1BB4CC9B2521F55600B0EC17 /* SKSMultiLineLyricsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSMultiLineLyricsLabel.swift; sourceTree = "<group>"; };
+		1BB4CC9C2521F55600B0EC17 /* SKSOneLineLyricsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSOneLineLyricsLabel.swift; sourceTree = "<group>"; };
+		264550A4019E3C84FAB74A4A /* Pods_SKSLyricsLabelDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKSLyricsLabelDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E05F2C4555AB4812EFB824E /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6DD8BBA5EEAFBE553B5F83F7 /* Pods-SKSLyricsLabelDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemoTests/Pods-SKSLyricsLabelDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87EAFEC56207A08B903DB533 /* Pods-SKSLyricsLabelDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemoTests.release.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemoTests/Pods-SKSLyricsLabelDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		88D43ACFCB0886B836A691B7 /* Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D5E7E8259CE73018A6C821 /* Pods-SKSLyricsLabelDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemo.release.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemo/Pods-SKSLyricsLabelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DCE8A3785F340656A563266B /* Pods-SKSLyricsLabelDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKSLyricsLabelDemo.debug.xcconfig"; path = "Target Support Files/Pods-SKSLyricsLabelDemo/Pods-SKSLyricsLabelDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BB4CC1D2521F28E00B0EC17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2400ED272ED0AAF41BAE2CED /* Pods_SKSLyricsLabelDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC332521F29000B0EC17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A1A454F01F423242F3D5AE7 /* Pods_SKSLyricsLabelDemoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC3E2521F29000B0EC17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CC1ACFE46A2BC9EBA2C012 /* Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17E7D937CBCF0262B02D67AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				264550A4019E3C84FAB74A4A /* Pods_SKSLyricsLabelDemo.framework */,
+				88D43ACFCB0886B836A691B7 /* Pods_SKSLyricsLabelDemo_SKSLyricsLabelDemoUITests.framework */,
+				01FADE9E4EA3F48DAD72A481 /* Pods_SKSLyricsLabelDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BB4CC172521F28E00B0EC17 = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC222521F28E00B0EC17 /* SKSLyricsLabelDemo */,
+				1BB4CC392521F29000B0EC17 /* SKSLyricsLabelDemoTests */,
+				1BB4CC442521F29000B0EC17 /* SKSLyricsLabelDemoUITests */,
+				1BB4CC212521F28E00B0EC17 /* Products */,
+				D0109A7E19F4567CD60F02C7 /* Pods */,
+				17E7D937CBCF0262B02D67AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1BB4CC212521F28E00B0EC17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC202521F28E00B0EC17 /* SKSLyricsLabelDemo.app */,
+				1BB4CC362521F29000B0EC17 /* SKSLyricsLabelDemoTests.xctest */,
+				1BB4CC412521F29000B0EC17 /* SKSLyricsLabelDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BB4CC222521F28E00B0EC17 /* SKSLyricsLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC992521F55600B0EC17 /* SKSLyricsLabel */,
+				1BB4CC712521F3D600B0EC17 /* Demo */,
+				1BB4CC642521F35F00B0EC17 /* 程序入口 */,
+			);
+			path = SKSLyricsLabelDemo;
+			sourceTree = "<group>";
+		};
+		1BB4CC392521F29000B0EC17 /* SKSLyricsLabelDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC3A2521F29000B0EC17 /* SKSLyricsLabelDemoTests.swift */,
+				1BB4CC3C2521F29000B0EC17 /* Info.plist */,
+			);
+			path = SKSLyricsLabelDemoTests;
+			sourceTree = "<group>";
+		};
+		1BB4CC442521F29000B0EC17 /* SKSLyricsLabelDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC452521F29000B0EC17 /* SKSLyricsLabelDemoUITests.swift */,
+				1BB4CC472521F29000B0EC17 /* Info.plist */,
+			);
+			path = SKSLyricsLabelDemoUITests;
+			sourceTree = "<group>";
+		};
+		1BB4CC642521F35F00B0EC17 /* 程序入口 */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC232521F28E00B0EC17 /* AppDelegate.swift */,
+				1BB4CC5F2521F34A00B0EC17 /* LaunchScreen.storyboard */,
+				1BB4CC2C2521F29000B0EC17 /* Assets.xcassets */,
+				1BB4CC312521F29000B0EC17 /* Info.plist */,
+			);
+			path = "程序入口";
+			sourceTree = "<group>";
+		};
+		1BB4CC712521F3D600B0EC17 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC722521F3D600B0EC17 /* DemoViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		1BB4CC992521F55600B0EC17 /* SKSLyricsLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1BB4CC9A2521F55600B0EC17 /* SKSLyricsLabelExtension.swift */,
+				1BB4CC9B2521F55600B0EC17 /* SKSMultiLineLyricsLabel.swift */,
+				1BB4CC9C2521F55600B0EC17 /* SKSOneLineLyricsLabel.swift */,
+			);
+			name = SKSLyricsLabel;
+			path = ../../SKSLyricsLabel;
+			sourceTree = "<group>";
+		};
+		D0109A7E19F4567CD60F02C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCE8A3785F340656A563266B /* Pods-SKSLyricsLabelDemo.debug.xcconfig */,
+				B4D5E7E8259CE73018A6C821 /* Pods-SKSLyricsLabelDemo.release.xcconfig */,
+				18801DF05BF83924C73FF3CF /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.debug.xcconfig */,
+				4E05F2C4555AB4812EFB824E /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.release.xcconfig */,
+				6DD8BBA5EEAFBE553B5F83F7 /* Pods-SKSLyricsLabelDemoTests.debug.xcconfig */,
+				87EAFEC56207A08B903DB533 /* Pods-SKSLyricsLabelDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BB4CC1F2521F28E00B0EC17 /* SKSLyricsLabelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB4CC4A2521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemo" */;
+			buildPhases = (
+				C608517BA3F8280501A293B3 /* [CP] Check Pods Manifest.lock */,
+				1BB4CC1C2521F28E00B0EC17 /* Sources */,
+				1BB4CC1D2521F28E00B0EC17 /* Frameworks */,
+				1BB4CC1E2521F28E00B0EC17 /* Resources */,
+				E89CA39FCF271E9E979E3664 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKSLyricsLabelDemo;
+			productName = SKSLyricsLabelDemo;
+			productReference = 1BB4CC202521F28E00B0EC17 /* SKSLyricsLabelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BB4CC352521F29000B0EC17 /* SKSLyricsLabelDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB4CC4D2521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemoTests" */;
+			buildPhases = (
+				7DED4042B18676D4227D0C36 /* [CP] Check Pods Manifest.lock */,
+				1BB4CC322521F29000B0EC17 /* Sources */,
+				1BB4CC332521F29000B0EC17 /* Frameworks */,
+				1BB4CC342521F29000B0EC17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BB4CC382521F29000B0EC17 /* PBXTargetDependency */,
+			);
+			name = SKSLyricsLabelDemoTests;
+			productName = SKSLyricsLabelDemoTests;
+			productReference = 1BB4CC362521F29000B0EC17 /* SKSLyricsLabelDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BB4CC402521F29000B0EC17 /* SKSLyricsLabelDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB4CC502521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemoUITests" */;
+			buildPhases = (
+				77CAAB37180BFDBA5FAD9273 /* [CP] Check Pods Manifest.lock */,
+				1BB4CC3D2521F29000B0EC17 /* Sources */,
+				1BB4CC3E2521F29000B0EC17 /* Frameworks */,
+				1BB4CC3F2521F29000B0EC17 /* Resources */,
+				359AB674F8030DC3A72F3003 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BB4CC432521F29000B0EC17 /* PBXTargetDependency */,
+			);
+			name = SKSLyricsLabelDemoUITests;
+			productName = SKSLyricsLabelDemoUITests;
+			productReference = 1BB4CC412521F29000B0EC17 /* SKSLyricsLabelDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BB4CC182521F28E00B0EC17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					1BB4CC1F2521F28E00B0EC17 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					1BB4CC352521F29000B0EC17 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 1BB4CC1F2521F28E00B0EC17;
+					};
+					1BB4CC402521F29000B0EC17 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 1BB4CC1F2521F28E00B0EC17;
+					};
+				};
+			};
+			buildConfigurationList = 1BB4CC1B2521F28E00B0EC17 /* Build configuration list for PBXProject "SKSLyricsLabelDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BB4CC172521F28E00B0EC17;
+			productRefGroup = 1BB4CC212521F28E00B0EC17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BB4CC1F2521F28E00B0EC17 /* SKSLyricsLabelDemo */,
+				1BB4CC352521F29000B0EC17 /* SKSLyricsLabelDemoTests */,
+				1BB4CC402521F29000B0EC17 /* SKSLyricsLabelDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BB4CC1E2521F28E00B0EC17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB4CC2D2521F29000B0EC17 /* Assets.xcassets in Resources */,
+				1BB4CC602521F34A00B0EC17 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC342521F29000B0EC17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC3F2521F29000B0EC17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		359AB674F8030DC3A72F3003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77CAAB37180BFDBA5FAD9273 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DED4042B18676D4227D0C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKSLyricsLabelDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C608517BA3F8280501A293B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SKSLyricsLabelDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E89CA39FCF271E9E979E3664 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo/Pods-SKSLyricsLabelDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo/Pods-SKSLyricsLabelDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SKSLyricsLabelDemo/Pods-SKSLyricsLabelDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BB4CC1C2521F28E00B0EC17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB4CC9D2521F55600B0EC17 /* SKSLyricsLabelExtension.swift in Sources */,
+				1BB4CC242521F28E00B0EC17 /* AppDelegate.swift in Sources */,
+				1BB4CC9E2521F55600B0EC17 /* SKSMultiLineLyricsLabel.swift in Sources */,
+				1BB4CC9F2521F55600B0EC17 /* SKSOneLineLyricsLabel.swift in Sources */,
+				1BB4CC772521F3D600B0EC17 /* DemoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC322521F29000B0EC17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB4CC3B2521F29000B0EC17 /* SKSLyricsLabelDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB4CC3D2521F29000B0EC17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB4CC462521F29000B0EC17 /* SKSLyricsLabelDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BB4CC382521F29000B0EC17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BB4CC1F2521F28E00B0EC17 /* SKSLyricsLabelDemo */;
+			targetProxy = 1BB4CC372521F29000B0EC17 /* PBXContainerItemProxy */;
+		};
+		1BB4CC432521F29000B0EC17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BB4CC1F2521F28E00B0EC17 /* SKSLyricsLabelDemo */;
+			targetProxy = 1BB4CC422521F29000B0EC17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BB4CC482521F29000B0EC17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1BB4CC492521F29000B0EC17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BB4CC4B2521F29000B0EC17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE8A3785F340656A563266B /* Pods-SKSLyricsLabelDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = "$(SRCROOT)/SKSLyricsLabelDemo/程序入口/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BB4CC4C2521F29000B0EC17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D5E7E8259CE73018A6C821 /* Pods-SKSLyricsLabelDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = "$(SRCROOT)/SKSLyricsLabelDemo/程序入口/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BB4CC4E2521F29000B0EC17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD8BBA5EEAFBE553B5F83F7 /* Pods-SKSLyricsLabelDemoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = SKSLyricsLabelDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKSLyricsLabelDemo.app/SKSLyricsLabelDemo";
+			};
+			name = Debug;
+		};
+		1BB4CC4F2521F29000B0EC17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EAFEC56207A08B903DB533 /* Pods-SKSLyricsLabelDemoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = SKSLyricsLabelDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKSLyricsLabelDemo.app/SKSLyricsLabelDemo";
+			};
+			name = Release;
+		};
+		1BB4CC512521F29000B0EC17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18801DF05BF83924C73FF3CF /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = SKSLyricsLabelDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKSLyricsLabelDemo;
+			};
+			name = Debug;
+		};
+		1BB4CC522521F29000B0EC17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E05F2C4555AB4812EFB824E /* Pods-SKSLyricsLabelDemo-SKSLyricsLabelDemoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DU679DY8XD;
+				INFOPLIST_FILE = SKSLyricsLabelDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sankeshu.SKSLyricsLabelDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKSLyricsLabelDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BB4CC1B2521F28E00B0EC17 /* Build configuration list for PBXProject "SKSLyricsLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB4CC482521F29000B0EC17 /* Debug */,
+				1BB4CC492521F29000B0EC17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB4CC4A2521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB4CC4B2521F29000B0EC17 /* Debug */,
+				1BB4CC4C2521F29000B0EC17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB4CC4D2521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB4CC4E2521F29000B0EC17 /* Debug */,
+				1BB4CC4F2521F29000B0EC17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB4CC502521F29000B0EC17 /* Build configuration list for PBXNativeTarget "SKSLyricsLabelDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB4CC512521F29000B0EC17 /* Debug */,
+				1BB4CC522521F29000B0EC17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BB4CC182521F28E00B0EC17 /* Project object */;
+}

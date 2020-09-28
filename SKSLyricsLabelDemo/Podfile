@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'SKSLyricsLabelDemo' do
+  use_frameworks!
+
+  pod 'SnapKit'
+
+  target 'SKSLyricsLabelDemoTests' do
+    inherit! :search_paths
+  end
+
+  target 'SKSLyricsLabelDemoUITests' do
+  end
+
+end

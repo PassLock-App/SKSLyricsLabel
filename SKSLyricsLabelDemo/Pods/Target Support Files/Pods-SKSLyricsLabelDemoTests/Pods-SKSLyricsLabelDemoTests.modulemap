@@ -1,0 +1,6 @@
+framework module Pods_SKSLyricsLabelDemoTests {
+  umbrella header "Pods-SKSLyricsLabelDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
