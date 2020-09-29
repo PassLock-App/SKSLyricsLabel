@@ -7,29 +7,33 @@ pod 'SKSLyricsLabel', '>= 1.0.0'
 ###更改记录：
 2020.09.29 -- init v1.0.0
 
-### 恶心的多行富文本卡拉OK文本，一步到位即可实现你想要的效果
+### 蛮多坑的多行富文本卡拉OK文本，更多玩法可查看源码和demo，记得star哦
 
     // 最简单的单行普通效果
     let oneLineNormalLabel = SKSOneLineLyricsLabel()
-    oneLineNormalLabel.text = <#这是我的文本内容#>
-    oneLineNormalLabel.attributeStr = <#这是我的富文本内容，尽量与text分开#>
-    oneLineNormalLabel.maskColor = .magenta
+    oneLineNormalLabel.text = "我是一个单行效果的卡拉OK歌词控件文本"
+    oneLineNormalLabel.attributeStr = NSAttributedString对象
+    oneLineNormalLabel.maskColor = 卡拉OK效果颜色
     self.view.addSubview(oneLineNormalLabel)
     
     oneLineNormalLabel.duration = <#在文本赋值后设置，duration一旦赋值即可实现播放效果#>
-    
+
+---------------------------------------------------------------------------------------------------------------
+
     // 相对复杂的富文本多行有行间距的效果
     let mutiLineAttLabel = SKSMultiLineLyricsLabel(<#文本控件的最大宽度，为什么不自适应？可见下面的Q&A>)
-    mutiLineAttLabel.maskColor = .magenta
-    mutiLineAttLabel.lineSpace = <#行间距#>
-    mutiLineAttLabel.attributeStr = <#你需要的富文本对象NSAttributedString#>
+    mutiLineAttLabel.maskColor = 卡拉OK效果颜色
+    mutiLineAttLabel.lineSpace = 行间距
+    mutiLineAttLabel.attributeStr = NSAttributedString对象
     self.view.addSubview(mutiLineAttLabel)
 
     mutiLineAttLabel.playAnimation(<#可以在赋值后播放的时长，完成回调可忽略#>) {
-        print("完成播放2")
+        print("完成播放")
     }
 
 ---------------------------------------------------------------------------------------------------------------
+
+![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.gif)
 
 ## Q&A:
 ### SKSLyricsLabel的思路是什么
@@ -75,6 +79,5 @@ pod 'SKSLyricsLabel', '>= 1.0.0'
 
 ![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo1.png)
 
-![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.png)
+![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.jpg)
 
-![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.gif)
