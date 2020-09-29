@@ -12,7 +12,7 @@ extension NSAttributedString {
     /// 对富文本进行平均分割区域
     /// - Parameters:
     ///   - width: 分割单元的宽度
-    ///   - height: ⚠️分割单元的高度，请谨慎使用font.lineHeight，如果使用了，务必自增一些高度，否则将导致分割失败
+    ///   - height: ⚠️分割单元的高度，请谨慎使用font.lineHeight，如果使用了，务必自增一些高度甚至可以使用font.lineHeight * 1.5，否则CTFramesetterCreateFrame时将导致单元格面积不足以放下富文本内容分割失败
     /// - Returns: 分割后的富文本数组
     public func sks_separatedAttLines(width: CGFloat, height: CGFloat) -> [NSAttributedString] {
         let textFrame = CGRect(x: 0, y: 0, width: width, height: height)
