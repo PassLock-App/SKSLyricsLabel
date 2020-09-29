@@ -77,7 +77,4 @@ pod 'SKSLyricsLabel', '>= 1.0.0'
    
    ---------------------------------------------------------------------------------------------------------------
 
-![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo1.png)
-
-![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.jpg)
 
