@@ -28,6 +28,7 @@ extension NSAttributedString {
             let frame: CTFrame = CTFramesetterCreateFrame(framesetter, CFRange(location: textPos, length: 0), rectPath, nil)
             let frameRange = CTFrameGetVisibleStringRange(frame)
             if frameRange.length == 0 {
+              // 如果传入的width和height不足以放下文字内容（比如字体是20，但是传入的高度却只有18，那明显放下不嘛），CTFrameGetVisibleStringRange顾名思义这是在可视范围内分割内容，导致frameRange长度为0，分割就会失败。
               pagingResult.append(self)
               break
             }
