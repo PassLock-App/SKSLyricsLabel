@@ -44,14 +44,14 @@ class DemoViewController: UIViewController {
         mutiLineNormalLabel.snp.makeConstraints { (make) in
             make.top.equalTo(oneLineAttbuteLabel.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
-            make.width.equalTo(mutiLineNormalLabel.textWidth)
+            make.width.equalTo(mutiLineNormalLabel.maxTextWidth)
             make.height.greaterThanOrEqualTo(0)
         }
         
         mutiLineAttLabel.snp.makeConstraints { (make) in
             make.top.equalTo(mutiLineNormalLabel.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
-            make.width.equalTo(mutiLineAttLabel.textWidth)
+            make.width.equalTo(mutiLineAttLabel.maxTextWidth)
             make.height.greaterThanOrEqualTo(0)
         }
         
@@ -105,7 +105,8 @@ class DemoViewController: UIViewController {
     }()
     
     lazy var mutiLineNormalLabel: SKSMultiLineLyricsLabel = {
-        let view = SKSMultiLineLyricsLabel(240)
+        let view = SKSMultiLineLyricsLabel()
+        view.maxTextWidth = 240
         view.font = UIFont.boldSystemFont(ofSize: 16)
         view.maskColor = .magenta
         view.backgroundColor = .lightGray
@@ -114,7 +115,8 @@ class DemoViewController: UIViewController {
     }()
     
     lazy var mutiLineAttLabel: SKSMultiLineLyricsLabel = {
-        let view = SKSMultiLineLyricsLabel(240)
+        let view = SKSMultiLineLyricsLabel()
+        view.maxTextWidth = 240
         view.backgroundColor = .lightGray
         view.textAligment = .center
         return view
@@ -133,15 +135,20 @@ extension DemoViewController {
     }
     
     @objc func mutiNormalClick() {
-        self.mutiLineNormalLabel.playAnimation(3) { [weak self] () in
+        self.mutiLineNormalLabel.playAnimation(1) { [weak self] () in
+            print("播放结束🔚")
+            self?.mutiLineNormalLabel.maxTextWidth = 180
             self?.mutiLineNormalLabel.lineSpace = 0
-            self?.mutiLineNormalLabel.textAligment = .right
             self?.mutiLineNormalLabel.font = UIFont.boldSystemFont(ofSize: 18)
+            self?.mutiLineNormalLabel.snp.updateConstraints({ (make) in
+                make.width.equalTo(180)
+            })
         }
     }
     
     @objc func mutiAttbuteClick() {
 //        self.mutiLineAttLabel.playAnimation(1) {
+        
 //        }
         self.mutiLineAttLabel.duration = 0.8
         self.mutiLineAttLabel.playCompletion = {

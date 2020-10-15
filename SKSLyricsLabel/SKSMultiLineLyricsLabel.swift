@@ -10,31 +10,18 @@ import UIKit
 
 /// 多行的歌词效果View
 public class SKSMultiLineLyricsLabel: UIView {
-    // MARK: 🍎🍎🍎 开始绘制 🍎🍎🍎
     
-    /// 初始化
-    /// - Parameters:
-    ///   - textWidth: 文本的最大宽度
-    public init(_ textWidth: CGFloat) {
-        super.init(frame: .zero)
-        
-        self.textWidth = textWidth
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: 🍎🍎🍎 懒加载 🍎🍎🍎
     /// 一行一行的歌词控件数组
     private (set) lazy var lyricsLabelArray: [SKSOneLineLyricsLabel] = {
         return [SKSOneLineLyricsLabel]()
     }()
-    
-    // MARK: 🍎🍎🍎 GET && SET 🍎🍎🍎
-    
+        
     /// 文本最大宽度
-    private (set) var textWidth: CGFloat!
+    public var maxTextWidth: CGFloat = 200 {
+        didSet {
+            self.updateSubViews()
+        }
+    }
     
     /// 文本内容
     public var text: String? {
@@ -142,14 +129,14 @@ extension SKSMultiLineLyricsLabel {
         var attributeArray = [NSAttributedString]()
         if let vAttbuteStr = self.attributeStr {
             // 富文本需要获取富文本中字体最大的那个Font，否则切片不会准确
-            attributeArray = vAttbuteStr.sks_separatedAttLines(width: textWidth, height: (vAttbuteStr.sks_maxAttbuteFont() ?? font).lineHeight * 1.5)
+            attributeArray = vAttbuteStr.sks_separatedAttLines(width: maxTextWidth, height: (vAttbuteStr.sks_maxAttbuteFont() ?? font).lineHeight * 1.5)
         }else{
             let paraStyle = NSMutableParagraphStyle()
             paraStyle.lineSpacing = lineSpace
             paraStyle.alignment = textAligment
             paraStyle.lineBreakMode = .byWordWrapping
             let attributeStr = NSMutableAttributedString(string: text ?? "", attributes: [.font: font, .foregroundColor: textColor, .paragraphStyle: paraStyle])
-            attributeArray = attributeStr.sks_separatedAttLines(width: textWidth, height: font.lineHeight * 1.5)
+            attributeArray = attributeStr.sks_separatedAttLines(width: maxTextWidth, height: font.lineHeight * 1.5)
         }
         
         var lastView: UIView?
