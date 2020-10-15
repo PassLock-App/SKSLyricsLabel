@@ -3,16 +3,17 @@
 
 ###支持cocoapods导入
 
-    pod 'SKSLyricsLabel', '>= 1.0.1'
+    pod 'SKSLyricsLabel', '>= 1.0.2'
 
 ---------------------------------------------------------------------------------------------------------------
 
 ###更改记录：  
+2020.10.15 -- init v1.0.2   修复多行控件反复点击出现的异常    
 2020.10.09 -- init v1.0.1   添加一些注释    
 2020.09.29 -- init v1.0.0   上传第一版代码    
 
 
-### 蛮多坑的多行富文本卡拉OK文本，更多玩法可查看源码和demo，记得star哦
+### 蛮多坑的iOS多行富文本卡拉OK控件，现已实现傻瓜式写法，更多属性可查看源码和demo，记得star哦
 
     // 最简单的单行普通效果
     let oneLineNormalLabel = SKSOneLineLyricsLabel()
@@ -42,7 +43,7 @@
 
 ## Q&A:
 ### SKSLyricsLabel的思路是什么
-经济基础决定上层建筑，现有需求后有方案，方案的前提是有思路。目前iOS提供的api还没有可以使用这类效果的（如果有，欢迎联系我635961956）。于是有了将一个超长文本拆分成多行的思路，每一行是一个单行，于是就有了使用CoreText对富文本进行按区域面积拆分的想法，经过一些坑，才有了如今相对稳定的SKSLyricsLabel
+笔者在这之前花过不少时间尝试其他方案，均不能达到想要的效果。由于目前iOS提供的api还没有可以使用这类效果的（如果有，欢迎联系我635961956，当然单行文本的话就简单得多，但是需求需要兼容多行和富文本）。于是有了将一个超长文本拆分成多行的思路，每一行是一个单行，于是就有了使用CoreText对富文本进行按区域面积拆分的想法，经过一些坑，才有了如今相对稳定的SKSLyricsLabel
 
 
 ### SKSLyricsLabel的多行文本控件需要初始化时传入一个width？
@@ -51,7 +52,7 @@
     /// 对富文本进行平均分割区域
     /// - Parameters:
     ///   - width: 分割单元的宽度
-    ///   - height: ⚠️分割单元的高度，请谨慎使用font.lineHeight，如果使用了，务必自增一些高度，否则将导致分割失败
+    ///   - height: ⚠️分割单元的高度，请谨慎使用font.lineHeight
     /// - Returns: 分割后的富文本数组
     public func sks_separatedAttLines(width: CGFloat, height: CGFloat) -> [NSAttributedString] {
         let textFrame = CGRect(x: 0, y: 0, width: width, height: height)

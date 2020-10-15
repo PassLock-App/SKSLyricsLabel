@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "SKSLyricsLabel"
 
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
 
   spec.summary      = "类似iOS卡拉OK歌词效果播放进度的Label，支持多行富文本换行。"
 

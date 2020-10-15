@@ -53,7 +53,7 @@ extension NSAttributedString {
                 }
             }
         }
-        
+
         return maxFont
     }
     
@@ -71,7 +71,7 @@ extension NSAttributedString {
                 }
             }
         }
-        
+
         return minFont
     }
     
@@ -79,24 +79,13 @@ extension NSAttributedString {
     public func sks_maxminDifferenceMultiple() -> CGFloat {
         let maxFont = self.sks_maxAttbuteFont()
         let minFont = self.sks_minAttbuteFont()
-        
+
         guard let vMaxHeight = maxFont?.lineHeight, let vMinHeight = minFont?.lineHeight else {
             return 0
         }
-        
+
         let space = vMaxHeight / vMinHeight
         return space
-    }
-    
-    /// 如果最大Font和最小Font相差倍数大于2，则会出现切割误差，故取中间值，相差实在太大，目前还没有这么变态的设计
-    public func sks_fitFont() -> UIFont? {
-        let space = self.sks_maxminDifferenceMultiple()
-        if space < 2 {
-            return self.sks_maxAttbuteFont()
-        }else{
-            // 倍数相差太大，先使用最大font切割，再对每一行进行切割
-            return nil
-        }
     }
     
 }
