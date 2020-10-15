@@ -12,7 +12,7 @@ class DemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "多行歌词进度效果"
+        self.title = "多行卡拉OK歌词进度效果"
         self.view.backgroundColor = .white
         self.preInitChildViews()
         self.layoutChildViews()
@@ -74,7 +74,7 @@ class DemoViewController: UIViewController {
         oneLineAttbuteLabel.addGestureRecognizer(oneTap2)
         
         // 3、多行富文本样式
-        mutiLineNormalLabel.text = "3、点击播放              一个多行歌词效果      的控件，smksmk是马克思     www我可没我看     完"
+        mutiLineNormalLabel.text = "3、点击播放              一个多行歌词效果      的控件，一波还未平息，一波又来袭击，茫茫人海风潮里去。。。深深太平洋底深深伤心💔"
         let oneTap3 = UITapGestureRecognizer(target: self, action: #selector(mutiNormalClick))
         mutiLineNormalLabel.addGestureRecognizer(oneTap3)
         
@@ -82,7 +82,7 @@ class DemoViewController: UIViewController {
         let mulAttbute = NSMutableAttributedString()
         mulAttbute.append(NSAttributedString(string: "4、点击播放一个", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.black]))
         mulAttbute.append(NSAttributedString(string: "多行富文本歌词", attributes: [.font: UIFont.boldSystemFont(ofSize: 16), .foregroundColor: UIColor.brown, .underlineStyle: 1]))
-        mulAttbute.append(NSAttributedString(string: "控件换行\r\n", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.black]))
+        mulAttbute.append(NSAttributedString(string: "控件换行\r\n", attributes: [.font: UIFont.boldSystemFont(ofSize: 20), .foregroundColor: UIColor.black]))
         mulAttbute.append(NSAttributedString(string: "What's wrong with you,can I help you. What's wrong with you,can I help you", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.systemBlue]))
         mutiLineAttLabel.attributeStr = mulAttbute
         let oneTap4 = UITapGestureRecognizer(target: self, action: #selector(mutiAttbuteClick))
@@ -105,12 +105,11 @@ class DemoViewController: UIViewController {
     }()
     
     lazy var mutiLineNormalLabel: SKSMultiLineLyricsLabel = {
-        
         let view = SKSMultiLineLyricsLabel(240)
-        view.font = UIFont.systemFont(ofSize: 16)
+        view.font = UIFont.boldSystemFont(ofSize: 16)
         view.maskColor = .magenta
         view.backgroundColor = .lightGray
-        view.lineSpace = 2
+        view.lineSpace = 6
         return view
     }()
     
@@ -134,18 +133,19 @@ extension DemoViewController {
     }
     
     @objc func mutiNormalClick() {
-        self.mutiLineNormalLabel.playAnimation(1) { [weak self] () in
-            print("完成播放1")
-            self?.mutiLineNormalLabel.text = "3、亲切的镇🐶"
-            self?.mutiLineNormalLabel.lineSpace = 10
+        self.mutiLineNormalLabel.playAnimation(3) { [weak self] () in
+            self?.mutiLineNormalLabel.lineSpace = 0
             self?.mutiLineNormalLabel.textAligment = .right
             self?.mutiLineNormalLabel.font = UIFont.boldSystemFont(ofSize: 18)
         }
     }
     
     @objc func mutiAttbuteClick() {
-        self.mutiLineAttLabel.playAnimation(2) {
-            print("完成播放2")
+//        self.mutiLineAttLabel.playAnimation(1) {
+//        }
+        self.mutiLineAttLabel.duration = 0.8
+        self.mutiLineAttLabel.playCompletion = {
+            print("播放结束🔚")
         }
     }
     

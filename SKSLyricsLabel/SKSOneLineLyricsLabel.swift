@@ -81,7 +81,7 @@ public class SKSOneLineLyricsLabel : UIView {
     public var isRemovedOnCompletion: Bool = true
     
     /// 播放结束的回调
-    public var completionCallBack: (()->Void)?
+    public var playCompletion: (()->Void)?
     
     /// 字体
     public var font: UIFont? {
@@ -131,9 +131,9 @@ public class SKSOneLineLyricsLabel : UIView {
     }
     
     /// 播放时长
-    public var duration: CGFloat? {
+    public var duration: CGFloat = 0 {
         didSet {
-            self.playAnimate(duration ?? 0)
+            self.playAnimation(duration)
         }
     }
     
@@ -143,14 +143,22 @@ public class SKSOneLineLyricsLabel : UIView {
 extension SKSOneLineLyricsLabel : CAAnimationDelegate {
     /// 播放完毕的代理
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        self.completionCallBack?()
+        if flag {
+            self.playCompletion?()
+        }
     }
     
     /// 根据设置显示动画
-    private func playAnimate(_ duration: CGFloat) {
+    /// 开始播放多行歌词控件
+    /// - Parameters:
+    ///   - duration: 总播放时长
+    ///   - completion: 完成播放的回调
+    public func playAnimation(_ duration: CGFloat, completion: (()->Void)? = nil) {
+        
+        self.playCompletion = completion
         self.stopAnimation()
         guard self.bounds.width > 0, duration > 0 else {
-            self.completionCallBack?()
+            self.playCompletion?()
             return
         }
         
@@ -178,7 +186,7 @@ extension SKSOneLineLyricsLabel : CAAnimationDelegate {
     
     /// 停止动画
     public func stopAnimation() {
-      self.maskLayer.removeAllAnimations()
+        self.maskLayer.removeAllAnimations()
     }
 }
 

@@ -19,25 +19,10 @@ public class SKSMultiLineLyricsLabel: UIView {
         super.init(frame: .zero)
         
         self.textWidth = textWidth
-        self.preInitChildViews()
-        self.layoutChildViews()
-        self.handleBusiness()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func preInitChildViews() {
-        
-    }
-    
-    private func layoutChildViews() {
-        
-    }
-    
-    private func handleBusiness() {
-        
     }
     
     // MARK: 🍎🍎🍎 懒加载 🍎🍎🍎
@@ -71,7 +56,6 @@ public class SKSMultiLineLyricsLabel: UIView {
             self.updateSubViews()
         }
     }
-    
     
     /// 字体颜色
     public var textColor: UIColor = .black {
@@ -108,8 +92,18 @@ public class SKSMultiLineLyricsLabel: UIView {
     /// 是否每播放完一行就除移进度色
     public var isRemovedOnCompletion: Bool = true
     
+    /// 播放结束的回调
+    public var playCompletion: (()->Void)?
+    
     /// 播放时长
-    private (set) var duration: CGFloat = 0
+    public var duration: CGFloat = 0 {
+        didSet{
+            self.playAnimation(duration)
+        }
+    }
+    
+    /// 临时存储器，总时长
+    private var sumDuration: CGFloat = 0
     
     /// 当前播放到第几行
     private (set) var playingIndex: Int = 0
@@ -123,14 +117,16 @@ extension SKSMultiLineLyricsLabel {
     ///   - duration: 总播放时长
     ///   - completion: 完成播放的回调
     public func playAnimation(_ duration: CGFloat, completion: (()->Void)? = nil) {
+        self.playCompletion = completion
         self.stopAnimation()
         self.playingIndex = 0
-        self.duration = duration >= 0 ? duration : -duration
+        self.sumDuration = duration >= 0 ? duration : -duration
         self.nextLyricsAnimation(duration: self.currentDuration(), index: self.playingIndex) { [weak self] () in
-            if self?.isRemovedOnCompletion ?? true {
-                self?.stopAnimation()
+            guard let wSelf = self else { return }
+            if wSelf.isRemovedOnCompletion {
+                wSelf.stopAnimation()
             }
-            completion?()
+            wSelf.playCompletion?()
         }
     }
 }
@@ -194,30 +190,20 @@ extension SKSMultiLineLyricsLabel {
         })
     }
     
-    /// 重置状态
-    private func reset() {
-        self.playingIndex = 0
-        self.lyricsLabelArray.forEach({ (subView) in
-            subView.stopAnimation()
-            subView.removeFromSuperview()
-        })
-        self.lyricsLabelArray.removeAll()
-    }
-    
     /// 分别计算每一行
     private func nextLyricsAnimation(duration: CGFloat, index: Int, completion: (()->Void)? = nil) {
         guard index < self.lyricsLabelArray.count else {
-          completion?()
-          return
+            completion?()
+            return
         }
         
         let view = self.lyricsLabelArray[index]
-        view.completionCallBack = { [weak self] () in
-            self?.playingIndex += 1
-            let nextDuration: CGFloat = self?.currentDuration() ?? 0.1
-            self?.nextLyricsAnimation(duration: nextDuration, index: self?.playingIndex ?? 0, completion: completion)
+        view.playAnimation(duration) { [weak self] () in
+            guard let wSelf = self else { return }
+            wSelf.playingIndex += 1
+            let nextDuration: CGFloat = wSelf.currentDuration()
+            wSelf.nextLyricsAnimation(duration: nextDuration, index: wSelf.playingIndex, completion: completion)
         }
-        view.duration = duration
     }
     
     /// 当前文本的音频长度
@@ -237,8 +223,17 @@ extension SKSMultiLineLyricsLabel {
         var progress: CGFloat = currentWidth / sumWidth
         progress = progress > 0 ? progress : 0.1
         progress = progress > 1 ? 1 : progress
-        let duration: CGFloat = self.duration * progress
+        let duration: CGFloat = sumDuration * progress
         return duration
     }
     
+    /// 重置状态
+    private func reset() {
+        self.playingIndex = 0
+        self.lyricsLabelArray.forEach({ (subView) in
+            subView.stopAnimation()
+            subView.removeFromSuperview()
+        })
+        self.lyricsLabelArray.removeAll()
+    }
 }
