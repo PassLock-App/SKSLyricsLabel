@@ -43,12 +43,13 @@
 ![](https://github.com/CoderChan/SKSLyricsLabel/blob/master/DemoScene/demo2.gif)
 
 ## Q&A:
-### SKSLyricsLabel的思路是什么
+### SKSLyricsLabel的思路是什么❓
 笔者在这之前花过不少时间尝试其他方案，均不能达到想要的效果。由于目前iOS提供的api还没有可以使用这类效果的（如果有，欢迎联系我635961956，当然单行文本的话就简单得多，但是需求需要兼容多行和富文本）。于是有了将一个超长文本拆分成多行的思路，每一行是一个单行，于是就有了使用CoreText对富文本进行按区域面积拆分的想法，经过一些坑，才有了如今相对稳定的SKSLyricsLabel
 
 
-### SKSLyricsLabel的多行文本控件需要初始化时传入一个width？
-由于上面的思路，拆分长文本需要一个面积，这个面积需要宽和高，由于高可以根据font.lineHeight设置，但是font.lineHeight在各个机型计算出的浮点型不是完全一样，哪怕只是相差0.000001也会导致面积不够放不下单元格内容，造成死循环（此坑踩过，已解决）拆分失败，于是将内部的NSAttributedString分类做成了需要传入宽高。附上关键代码：
+### ⏰经典深坑提醒
+由于上面的思路，拆分长文本需要一个面积，这个面积需要宽和高，由于高可以根据font.lineHeight设置，但是font.lineHeight在各个机型计算出的浮点型不是完全一样，哪怕只是相差0.000001也会导致面积不够放不下单元格内容，
+造成死循环（此坑踩过，已解决）拆分失败，于是将内部的NSAttributedString分类做成了需要传入宽高。附上关键代码：
 
     /// 对富文本进行平均分割区域
     /// - Parameters:
