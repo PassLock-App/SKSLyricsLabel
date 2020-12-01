@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
 
   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
-  spec.author             = { "陈振超" => "czc1943@126.com" }
+  spec.author       = { "陈振超" => "czc1943@126.com" }
 
   spec.platform     = :ios, "9.0"
 
